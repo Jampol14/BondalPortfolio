@@ -1,0 +1,185 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive web design -->
+    <title>Portfolio</title> <!-- Sets the title of the document -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Links to Tailwind CSS for styling -->
+    <link rel="stylesheet" href="styles.css"> <!-- Includes custom styles -->
+</head>
+
+<body class="bg-gradient-to-b from-black to-gray-900 text-white flex flex-col min-h-screen"> <!-- Applies styles and classes to the body -->
+
+    <!-- Navigation -->
+    <nav class="bg-black-800 bg-opacity-75 text-white p-4 shadow-lg"> <!-- Styles for the navigation bar -->
+        <div class="max-w-7xl mx-auto flex justify-between items-center"> <!-- Container for navigation items -->
+            <div>
+                <span class="font-bold text-xl">My Portfolio</span> <!-- Navigation title -->
+            </div>
+            <div class="flex space-x-4"> <!-- Container for navigation buttons -->
+                <button onclick="toggleSection('home')" class="hover:text-gray-400">Home</button> <!-- Home button -->
+                <button onclick="toggleSection('about')" class="hover:text-gray-400">About Me</button> <!-- About Me button -->
+                <button onclick="toggleSection('projects')" class="hover:text-gray-400">Projects</button> <!-- Projects button -->
+                <button onclick="toggleSection('contact')" class="hover:text-gray-400">Contact</button> <!-- Contact button -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="bg-black-900 text-white py-20 flex-1 flex items-center justify-center transition-opacity duration-1000"> <!-- Home section with styles -->
+        <div class="max-w-7xl mx-auto px-4 lg:flex lg:items-center"> <!-- Container for home content -->
+            <img src="images/pr.jpg" alt="Profile Picture" class="profile-picture lg:float-left lg:mr-20 mb-10 lg:mb-0 rounded-full object-cover w-40 h-40"> <!-- Profile picture -->
+            <div class="text-center lg:text-left"> <!-- Container for text content -->
+                <h1 class="text-5xl font-bold mb-4">Hi, I'm Jhon Paul S. Bondal</h1> <!-- Heading -->
+                <p class="text-lg mb-8">I am a student who is passionate about programming languages.</p> <!-- Introduction text -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 hidden flex-1 bg-black-800 bg-opacity-75 transition-opacity duration-1000"> <!-- About Me section with styles -->
+        <div class="max-w-7xl mx-auto px-4"> <!-- Container for about me content -->
+            <h2 class="text-4xl font-bold mb-8">My Background</h2> <!-- Section heading -->
+            <p class="text-lg mb-8">I'm a 2nd Year BSIT Student in College of St.Catherine Quezon City</p> <!-- Background information -->
+            <h2 class="text-3xl font-bold mb-4">Education</h2> <!-- Subheading for education -->
+            <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Container for education details -->
+                <h3 class="text-xl font-semibold mb-2">College</h3> <!-- College information -->
+                <p>College of St.Catherine Quezon City</p>
+                <p>2022 - Present</p>
+                <br>
+                <h3 class="text-xl font-semibold mb-2">Senior HighSchool</h3> <!-- Senior HighSchool information -->
+                <p>College of St.Catherine Quezon City</p>
+                <p>2019 - 2021</p>
+                <br>
+                <h3 class="text-xl font-semibold mb-2">Junior HighSchool</h3> <!-- Junior HighSchool information -->
+                <p>New Era HighSchool</p>
+                <p>2015 - 2019</p>
+                <br>
+                <h3 class="text-xl font-semibold mb-2">Elementary</h3> <!-- Elementary information -->
+                <p>New Era Elementary School</p>
+                <p>2009 - 2015</p>
+            </div>
+            <br>
+            <h2 class="text-3xl font-bold mb-8">Skills</h2> <!-- Subheading for skills -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- Container for skills details -->
+                <!-- My Skill -->
+                <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Java skill -->
+                    <h3 class="text-xl font-semibold mb-2">Java</h3>
+                    <p>1 Year and 3 Months</p>
+                </div>
+                <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Python skill -->
+                    <h3 class="text-xl font-semibold mb-2">Python</h3>
+                    <p>3 Months</p>
+                </div>
+                <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- C# skill -->
+                    <h3 class="text-xl font-semibold mb-2">C#</h3>
+                    <p>4 Months</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 hidden flex-1 bg-black-800 bg-opacity-25 transition-opacity duration-1000"> <!-- Projects section with styles -->
+        <div class="max-w-7xl mx-auto px-4"> <!-- Container for projects content -->
+            <h2 class="text-4xl font-bold mb-8">My Projects</h2> <!-- Section heading -->
+
+            <!-- Java Projects -->
+            <div>
+                <h3 class="text-3xl font-bold mb-4">Java Projects</h3> <!-- Subheading for Java projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> <!-- Container for Java projects -->
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 1 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 1</h4>
+                        <p>Simple 2d game sprite(unfinished).</p>
+                        <video controls class="w-full mt-4 rounded-lg"> <!-- Video for Project 1 -->
+                            <source src="videos/AdventureGame.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 2 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 2</h4>
+                        <p>Simple viewing schedule program using scanner.</p>
+                        <video controls class="w-full mt-4 rounded-lg"> <!-- Video for Project 2 -->
+                            <source src="videos/Schedule.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 3 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 3</h4>
+                        <p>Simple Java Guessing Number.</p>
+                        <video controls class="w-full mt-4 rounded-lg"> <!-- Video for Project 3 -->
+                            <source src="videos/GuessNumber.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C# Projects -->
+            <div>
+                <h3 class="text-3xl font-bold mb-4 mt-8">C# Projects</h3> <!-- Subheading for C# projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> <!-- Container for C# projects -->
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 1 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 1</h4>
+                        <p></p>
+                        <video controls class="w-full mt-4 rounded-lg"> <!-- Video for Project 1 -->
+                            <source src="videos/Threads.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Projects -->
+            <div>
+                <h3 class="text-3xl font-bold mb-4 mt-8">Python Projects</h3> <!-- Subheading for Python projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> <!-- Container for Python projects -->
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 1 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 1</h4>
+                        <p>Guessing Number in Python</p>
+                        <img src="images/GuessNumberPy.png" alt="Project 1 Image" class="w-full mt-4 rounded-lg"> <!-- Image for Project 1 -->
+                    </div>
+                    <div class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Project 2 details -->
+                        <h4 class="text-xl font-semibold mb-2">Project 2</h4>
+                        <p>Rock, Paper and Scissors</p>
+                        <img src="images/RockPaperScissors.png" alt="Project 2 Image" class="w-full mt-4 rounded-lg"> <!-- Image for Project 2 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 hidden flex-1 bg-black-800 bg-opacity-75 transition-opacity duration-1000"> <!-- Contact section with styles -->
+        <div class="max-w-7xl mx-auto px-4"> <!-- Container for contact content -->
+            <h2 class="text-4xl font-bold mb-8">Feedback</h2> <!-- Section heading -->
+            <form id="contact-form" class="bg-white text-black p-6 rounded-lg shadow-md"> <!-- Feedback form -->
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-semibold mb-2">Name</label> <!-- Name label -->
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required> <!-- Name input -->
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-semibold mb-2">Email</label> <!-- Email label -->
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required> <!-- Email input -->
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg font-semibold mb-2">Message</label> <!-- Message label -->
+                    <textarea id="message" name="message" class="w-full p-2 border border-gray-300 rounded resize-none" rows="4" required></textarea> <!-- Message textarea -->
+                </div>                
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Message</button> <!-- Submit button -->
+            </form>
+            <p id="feedback" class="text-lg font-semibold mt-4 hidden"></p> <!-- Feedback message -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black-800 bg-opacity-75 text-white py-4 shadow-lg"> <!-- Footer section with styles -->
+        <div class="max-w-7xl mx-auto px-4 flex justify-center items-center h-full"> <!-- Container for footer content -->
+            <div>
+                <p>&copy; 2024 Jhon Paul Bondal. All rights reserved.</p> <!-- Footer text -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script> <!-- Links to external JavaScript file -->
+</body>
+
+</html>

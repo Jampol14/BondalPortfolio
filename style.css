@@ -1,0 +1,59 @@
+/* General Styles */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  min-height: 100vh; /* Minimum height of the body */
+  background: linear-gradient(to bottom, black, #1a1a1a); /* Background gradient */
+  font-family: 'Roboto', sans-serif; /* Font for better readability */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: rgba(0, 0, 0, 0.75); /* Adjusted opacity for better contrast */
+  backdrop-filter: blur(10px); /* Added backdrop filter for a frosted glass effect */
+  position: sticky; /* Stick to the top of the viewport */
+  top: 0; /* Position at the top */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+nav button:hover {
+  color: #cbd5e0; /* Lightened text color on hover for better visibility */
+}
+
+/* Section Styles */
+section {
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 1s ease, visibility 0s linear 0.5s; /* Smooth transition effects */
+}
+
+section:not(.hidden) {
+  visibility: visible; /* Make visible */
+  transition-delay: 1s; /* Delay the transition */
+}
+
+section:not(.hidden) {
+  opacity: 1; /* Make fully visible */
+  transition-delay: 0s; /* No delay */
+}
+
+textarea.resize-none {
+  resize: none; /* Disable resizing */
+}
+
+/* Footer Styles */
+footer {
+  margin-top: auto; /* Push to the bottom */
+  background-color: rgba(0, 0, 0, 0.75); /* Adjusted footer opacity for better contrast */
+  backdrop-filter: blur(10px); /* Added backdrop filter for a frosted glass effect */
+}
+
+footer p {
+  color: #cbd5e0; /* Adjusted footer text color for better visibility */
+}
